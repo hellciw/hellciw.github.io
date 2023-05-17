@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>  CSS样式笔记 | Alexander@Blog
+</title>
+  <link rel="canonical" href="/cssyang-shi-bi-ji.html">
+
+
+  <link rel="stylesheet" href="/theme/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/theme/css/fontawesome.min.css">
+  <link rel="stylesheet" href="/theme/css/pygments/default.min.css">
+  <link rel="stylesheet" href="/theme/css/theme.css">
+
+  
+  <meta name="description" content="CSS样式笔记 1、关于对div样式横置 display：flex or float：left 2、center的作用域text-align:center `text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己 …">
+
+
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+<div class="row">
+  <div class="col-sm-12">
+    <h1 class="title"><a href="/">Alexander@Blog</a></h1>
+      <ul class="list-inline">
+          <li class="list-inline-item"><a href="https://blog.csdn.net/weixin_47389883?type=blog" target="_blank">CSDN</a></li>
+          <li class="list-inline-item"><a href="https://space.bilibili.com/15219798?spm_id_from=333.1007.0.0" target="_blank">bilibili</a></li>
+          <li class="list-inline-item"><a href="https://www.luogu.com.cn/blog/LinMax/" target="_blank">LuoGu</a></li>
+              <li class="list-inline-item text-muted">|</li>
+            <li class="list-inline-item"><a href="/pages/about-me.html">About Me</a></li>
+      </ul>
+  </div>
+</div>    </div>
+  </header>
+
+  <div class="main">
+    <div class="container">
+      <h1>  CSS样式笔记
+</h1>
+      <hr>
+  <article class="article">
+    <header>
+      <ul class="list-inline">
+        <li class="list-inline-item text-muted" title="2023-05-17T10:00:00+08:00">
+          <i class="fas fa-clock"></i>
+          周三 17 五月 2023
+        </li>
+        <li class="list-inline-item">
+          <i class="fas fa-folder-open"></i>
+          <a href="/category/css.html">Css</a>
+        </li>
+          <li class="list-inline-item">
+            <i class="fas fa-user"></i>
+              <a href="/author/alexander.html">Alexander</a>          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-tag"></i>
+              <a href="/tag/alexander.html">#Alexander</a>          </li>
+      </ul>
+    </header>
+    <div class="content">
+      <h1>CSS样式笔记</h1>
+<h2>1、关于对div样式横置</h2>
+<div class="highlight"><pre><span></span><code>display：flex   or   float：left
+</code></pre></div>
+
+<h2>2、center的作用域text-align:center</h2>
+<div class="highlight"><pre><span></span><code>`text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
+</code></pre></div>
+
+<h3>1)常见的行内元素</h3>
+<div class="highlight"><pre><span></span><code> &lt;span&gt;、&lt;a&gt;、 &lt;img&gt;、 &lt;input&gt;、&lt;textarea&gt;、&lt;select&gt;、&lt;label&gt;
+ 还有包括一些文本元素如：&lt;br&gt;  、&lt;b&gt;、 &lt;strong&gt;、&lt;sup&gt; 、&lt;sub&gt;、 &lt;i&gt; 、&lt;em&gt; 、&lt;del&gt; 、 &lt;u&gt;等。
+ 不能只回答&lt;img&gt;和&lt;a&gt;吧！
+</code></pre></div>
+
+<h3>2)常见的块级元素</h3>
+<div class="highlight"><pre><span></span><code><span class="p">&lt;</span><span class="nx">div</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">table</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">form</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">p</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">ul</span><span class="p">&gt;</span><span class="w">  </span><span class="p">&lt;</span><span class="nx">h1</span><span class="p">&gt;</span><span class="o">......</span><span class="p">&lt;</span><span class="nx">h6</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">hr</span><span class="p">&gt;</span><span class="w">   </span><span class="p">&lt;</span><span class="nx">pre</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">address</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">center</span><span class="p">&gt;</span><span class="w"> </span><span class="p">&lt;</span><span class="nx">marquee</span><span class="p">&gt;</span><span class="w">  </span><span class="p">&lt;</span><span class="nx">blockquote</span><span class="p">&gt;</span><span class="w">  </span><span class="nx">等</span><span class="err">。</span>
+</code></pre></div>
+
+<h3>3)区别</h3>
+<h4>-块级元素</h4>
+<ol>
+<li>总是从新的一行开始，即各个块级元素独占一行，默认垂直向下排列；</li>
+<li>高度、宽度、margin及padding都是可控的，设置有效，有边距效果；</li>
+<li>宽度没有设置时，默认为100%；</li>
+<li>块级元素中可以包含块级元素和行内元素。</li>
+</ol>
+<h4>-行内元素</h4>
+<ol>
+<li>其他元素都在一行，即行内元素和其他行内元素都会在一条水平线上排列；</li>
+<li>高度、宽度是不可控的，设置无效，由内容决定。</li>
+<li>根据标签语义化的理念，行内元素最好只包含行内元素，不包含块级元素。</li>
+</ol>
+    </div>
+  </article>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+<div class="row">
+  <ul class="col-sm-6 list-inline">
+      <li class="list-inline-item"><a href="/authors.html">Authors</a></li>
+    <li class="list-inline-item"><a href="/archives.html">Archives</a></li>
+    <li class="list-inline-item"><a href="/categories.html">Categories</a></li>
+      <li class="list-inline-item"><a href="/tags.html">Tags</a></li>
+  </ul>
+  <p class="col-sm-6 text-sm-right text-muted">
+    Generated by <a href="https://github.com/getpelican/pelican" target="_blank">Pelican</a>
+    / <a href="https://github.com/nairobilug/pelican-alchemy" target="_blank">&#x2728;</a>
+  </p>
+</div>    </div>
+  </footer>
+
+</body>
+
+</html>
