@@ -53,7 +53,7 @@
         </li>
         <li class="list-inline-item">
           <i class="fas fa-folder-open"></i>
-          <a href="/category/bi-ji.html">笔记</a>
+          <a href="/category/webots.html">webots</a>
         </li>
           <li class="list-inline-item">
             <i class="fas fa-user"></i>
@@ -72,8 +72,7 @@
 <h4>无监督学习</h4>
 <p>我们只有数据，没有预测目标需要构造具体的模型来找出数据的具体规律。其代表的主要内容包括聚类（找出相似多组数据，并把它们归类）。</p>
 <h4>卷积神经网络</h4>
-<div class="highlight"><pre><span></span><code><span class="err">​```</span><span class="n">python</span>
-<span class="kn">import</span> <span class="nn">torch</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
 <span class="kn">import</span> <span class="nn">torch.nn.functional</span> <span class="k">as</span> <span class="nn">F</span>
 
@@ -105,15 +104,13 @@
         <span class="c1"># 通过全连接层3，不使用激活函数</span>
         <span class="n">x</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">fc3</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
         <span class="k">return</span> <span class="n">x</span>
-<span class="err">​```</span>
 </code></pre></div>
 
 <blockquote>
 <p>这个卷积神经网络包括两个卷积层和三个全连接层。在前向传播过程中，输入张量通过卷积层1和ReLU激活函数，然后进行池化。接着，输出张量通过卷积层2和ReLU激活函数，然后进行池化。最后，输出张量被展平并通过三个全连接层进行处理。在每个全连接层中，输出张量都通过ReLU激活函数，除了最后一个全连接层，它没有激活函数。</p>
 </blockquote>
 <h4>主函数</h4>
-<div class="highlight"><pre><span></span><code><span class="err">​```</span><span class="n">python</span>
-<span class="kn">import</span> <span class="nn">torch</span>
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">torch</span>
 <span class="kn">import</span> <span class="nn">torchvision</span>
 <span class="kn">import</span> <span class="nn">torchvision.transforms</span> <span class="k">as</span> <span class="nn">transforms</span>
 <span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
@@ -267,8 +264,7 @@ wb_motor_set_position(left_motor, 90.0);
 <p>wb_robot_get_basic_time_step是Webots中的一个函数，用于获取仿真时间步长。仿真时间步长是指仿真器在每个仿真步骤中前进的时间量。该函数通常用于控制机器人的运动和行为，以便在每个时间步长内更新机器人的状态和执行相应的操作。例如，可以使用该函数来控制机器人的速度、方向和位置，以便在仿真中模拟真实世界中的行为。</p>
 </blockquote>
 <h2>Webots使用python的API</h2>
-<div class="highlight"><pre><span></span><code><span class="err">​```</span><span class="n">python</span>
-<span class="c1"># 导入Webots Python API</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># 导入Webots Python API</span>
 <span class="kn">from</span> <span class="nn">controller</span> <span class="kn">import</span> <span class="n">Robot</span><span class="p">,</span> <span class="n">Camera</span>
 
 <span class="c1"># 创建机器人实例</span>
@@ -291,8 +287,6 @@ wb_motor_set_position(left_motor, 90.0);
 
     <span class="c1"># 处理RGBD数据</span>
     <span class="c1"># ...</span>
-
-<span class="err">​```</span>
 </code></pre></div>
 
 <blockquote>
