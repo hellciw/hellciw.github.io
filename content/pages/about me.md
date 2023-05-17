@@ -2,8 +2,8 @@ title: About Me
 
 Category: about me
 
-auther:Alexander
+##auther:Alexander
 
-About me content
 
-Thank you for visiting. Welcome!
+
+#欢迎您的光临，小博客蓬荜生辉
