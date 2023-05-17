@@ -17,7 +17,7 @@
   <link rel="stylesheet" href="/theme/css/theme.css">
 
   
-  <meta name="description" content="Vue学习笔记 一、二维数组尝试 var vm = new Vue({ el: "#app", data: { huilv:[ [6.8540, 132.9787, 1298.7013, 1.3278], [6.8540, 132.9787, 1298.7013, 1.3278] ],} 二、watch监听实现 watch: { first: function(newValue){ this.second = newValue * this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton …">
+  <meta name="description" content="Vue学习笔记 一、二维数组尝试 var vm = new Vue({ el: "#app", data: { huilv:[ [6.8540, 132.9787, 1298.7013, 1.3278], [6.8540, 132.9787, 1298.7013, 1.3278] ],} 二、watch监听实现 watch: { First: function(newValue){ this.second = newValue * this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton …">
 
 
 </head>
@@ -66,23 +66,26 @@
     <div class="content">
       <h1>Vue学习笔记</h1>
 <h2>一、二维数组尝试</h2>
-<div class="highlight"><pre><span></span><code><span class="k">var</span><span class="w"> </span><span class="n">vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">new</span><span class="w"> </span><span class="n">Vue</span><span class="p">({</span>
-<span class="w">    </span><span class="n">el</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;#app&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="n">data</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">huilv</span><span class="p">:[</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">vm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="nx">Vue</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">el</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;#app&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">data</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">huilv</span><span class="o">:</span><span class="p">[</span>
 <span class="w">    </span><span class="p">[</span><span class="mf">6.8540</span><span class="p">,</span><span class="w"> </span><span class="mf">132.9787</span><span class="p">,</span><span class="w"> </span><span class="mf">1298.7013</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3278</span><span class="p">],</span>
 <span class="w">    </span><span class="p">[</span><span class="mf">6.8540</span><span class="p">,</span><span class="w"> </span><span class="mf">132.9787</span><span class="p">,</span><span class="w"> </span><span class="mf">1298.7013</span><span class="p">,</span><span class="w"> </span><span class="mf">1.3278</span><span class="p">]</span>
 <span class="w">        </span><span class="p">],}</span>
 </code></pre></div>
 
 <h2>二、watch监听实现</h2>
-<div class="highlight"><pre><span></span><code><span class="nt">watch</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="n">first</span><span class="p">:</span><span class="w"> </span><span class="nf">function</span><span class="p">(</span><span class="n">newValue</span><span class="p">)</span><span class="err">{</span>
-<span class="w">    </span><span class="n">this</span><span class="o">.</span><span class="n">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">newValue</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">this</span><span class="o">.</span><span class="n">huilv</span><span class="cp">[</span><span class="nx">Number</span><span class="p">(</span><span class="nx">this.firstbutton</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="cp">][</span><span class="nx">Number</span><span class="p">(</span><span class="nx">this.secondbutton</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="cp">]</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span><span class="o">,</span>
-<span class="w">    </span><span class="nt">second</span><span class="o">:</span><span class="w"> </span><span class="nt">function</span><span class="o">(</span><span class="nt">newValue</span><span class="o">)</span><span class="p">{</span>
-<span class="w">    </span><span class="err">this.first</span><span class="w"> </span><span class="err">=</span><span class="w"> </span><span class="err">newValue</span><span class="w"> </span><span class="err">/</span><span class="w"> </span><span class="err">this.huilv</span><span class="cp">[</span><span class="nx">Number</span><span class="p">(</span><span class="nx">this.firstbutton</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="cp">][</span><span class="nx">Number</span><span class="p">(</span><span class="nx">this.secondbutton</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="cp">]</span><span class="p">;</span>
-<span class="w">                    </span><span class="p">}</span><span class="err">}</span><span class="w"> </span>
+<div class="highlight"><pre><span></span><code><span class="nx">watch</span><span class="o">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">First</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">newValue</span><span class="p">){</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">second</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">newValue</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">huilv</span><span class="p">[</span><span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firstbutton</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)][</span><span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">secondbutton</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)];</span>
+<span class="w">                    </span><span class="p">},</span>
+<span class="w">    </span><span class="nx">Second</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="p">(</span><span class="nx">newValue</span><span class="p">){</span>
+
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">newValue</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">huilv</span><span class="p">[</span><span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">firstbutton</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mf">1</span><span class="p">)][</span><span class="nb">Number</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">secondbutton</span><span class="w"> </span><span class="o">-</span><span class="mf">1</span><span class="p">)];</span>
+
+<span class="w">                    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <h2>三、数组的更新检测</h2>
