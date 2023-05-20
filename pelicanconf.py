@@ -1,5 +1,5 @@
-AUTHOR = 'Alexander'
-SITENAME = 'Alexander@Blog'
+AUTHOR = 'hellciw'
+SITENAME = 'hellciw@Blog'
 SITEURL = ''
 
 PATH = 'content'
@@ -33,4 +33,4 @@ DEFAULT_PAGINATION = 10
 
 THEME = 'pelican-alchemy/alchemy'
 PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['readtime', 'neighbors']
+PLUGINS = ['readtime', 'neighbors',]
