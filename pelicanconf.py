@@ -15,7 +15,6 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
-
 # Blogroll
 LINKS = (('CSDN', 'https://blog.csdn.net/weixin_47389883?type=blog'),
          ('bilibili', 'https://space.bilibili.com/15219798?spm_id_from=333.1007.0.0'),
@@ -29,8 +28,4 @@ DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-
-
-THEME = 'pelican-alchemy/alchemy'
-PLUGIN_PATHS = ['pelican-plugins']
-PLUGINS = ['readtime', 'neighbors',]
+THEME = 'themes/pelican-alchemy/alchemy'
