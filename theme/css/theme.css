@@ -6,7 +6,6 @@
   color: var(--secondary);
   text-shadow: none;
 }
-
 blockquote {
   opacity: .7;
   font-style: italic;
@@ -20,6 +19,7 @@ hr {
 
 .container {
   max-width: 1500px;
+  background-color: floralwhite;
 }
 
 .header,
@@ -121,6 +121,7 @@ hr {
   border-color: limegreen;
   background-color: palegreen;
 }
+
 
 @media (min-width: 576px) {
   .header .title {
