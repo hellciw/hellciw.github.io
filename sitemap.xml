@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+      <loc>/cssyang-shi-bi-ji.html</loc>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>/tu-jie-http.html</loc>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>/vuexue-xi-bi-ji.html</loc>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>/wang-an-xue-xi.html</loc>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>/xiang-mu-xue-xi.html</loc>
+      <priority>0.8</priority>
+    </url>
+    <url>
+      <loc>/pages/about-me.html</loc>
+      <priority>1.0</priority>
+    </url>
+</urlset>
