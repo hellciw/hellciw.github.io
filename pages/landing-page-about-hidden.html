@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="/theme/css/elegant.prod.9e9d5ce754.css" media="screen">
         <link rel="stylesheet" type="text/css" href="/theme/css/custom.css" media="screen">
-
         <link rel="dns-prefetch" href="//fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
 
@@ -15,18 +14,16 @@
         <meta property="og:type" content="article" />
         <meta name="twitter:card" content="summary">
 
-<meta name="keywords" content="hellciw, Css, " />
 
-<meta property="og:title" content="CSS样式笔记 "/>
-<meta property="og:url" content="/cssyang-shi-bi-ji.html" />
-<meta property="og:description" content="CSS样式笔记 1、关于对div样式横置 display：flex or float：left 2、center的作用域text-align:center `text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己 …" />
+<meta property="og:title" content="About me "/>
+<meta property="og:url" content="/pages/landing-page-about-hidden.html" />
+<meta property="og:description" content="欢迎您的光临，小博客蓬荜生辉 这个博客会写一些学习心得，和生活随笔。" />
 <meta property="og:site_name" content="hellciw@Blog" />
 <meta property="og:article:author" content="hellciw" />
-<meta property="og:article:published_time" content="2023-05-17T10:00:00+08:00" />
-<meta name="twitter:title" content="CSS样式笔记 ">
-<meta name="twitter:description" content="CSS样式笔记 1、关于对div样式横置 display：flex or float：left 2、center的作用域text-align:center `text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己 …">
+<meta name="twitter:title" content="About me ">
+<meta name="twitter:description" content="欢迎您的光临，小博客蓬荜生辉 这个博客会写一些学习心得，和生活随笔。">
 
-        <title>CSS样式笔记  · hellciw@Blog
+        <title>About me  · hellciw@Blog
 </title>
 
 
@@ -50,7 +47,6 @@
                                        "/"
                                     >Home</a>
                                 </li>
-                                <li ><a href="/pages/about-me.html">About Me</a></li>
                                 <li ><a href="/categories.html">Categories</a></li>
                                 <li ><a href="/tags.html">Tags</a></li>
                                 <li ><a href="/archives.html">Archives</a></li>
@@ -64,59 +60,18 @@
                 <div class="row-fluid">
                     <div class="span1"></div>
                     <div class="span10">
-<article itemscope>
+<article>
 <div class="row-fluid">
     <header class="page-header span10 offset2">
-        <h1>
-            <a href="/cssyang-shi-bi-ji.html">
-                CSS样式笔记
-            </a>
-        </h1>
+    <h1><a href="/pages/landing-page-about-hidden.html"> About me  </a></h1>
     </header>
 </div>
 
 <div class="row-fluid">
         <div class="span8 offset2 article-content">
-            
-            <h1>CSS样式笔记</h1>
-<h2>1、关于对div样式横置</h2>
-<div class="highlight"><pre><span></span><code>display：flex   or   float：left
-</code></pre></div>
 
-<h2>2、center的作用域text-align:center</h2>
-<div class="highlight"><pre><span></span><code>`text-align` CSS 属性定义行内内容（例如文字）如何相对它的块父元素对齐。`text-align` 并不控制块元素自己的对齐，只控制它的行内内容的对齐。
-</code></pre></div>
-
-<h3>1)常见的行内元素</h3>
-<div class="highlight"><pre><span></span><code> <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>、<span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>、 <span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>、 <span class="p">&lt;</span><span class="nt">input</span><span class="p">&gt;</span>、<span class="p">&lt;</span><span class="nt">textarea</span><span class="p">&gt;</span>、<span class="p">&lt;</span><span class="nt">select</span><span class="p">&gt;</span>、<span class="p">&lt;</span><span class="nt">label</span><span class="p">&gt;</span>
- 还有包括一些文本元素如：<span class="p">&lt;</span><span class="nt">br</span><span class="p">&gt;</span>  、<span class="p">&lt;</span><span class="nt">b</span><span class="p">&gt;</span>、 <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>、<span class="p">&lt;</span><span class="nt">sup</span><span class="p">&gt;</span> 、<span class="p">&lt;</span><span class="nt">sub</span><span class="p">&gt;</span>、 <span class="p">&lt;</span><span class="nt">i</span><span class="p">&gt;</span> 、<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> 、<span class="p">&lt;</span><span class="nt">del</span><span class="p">&gt;</span> 、 <span class="p">&lt;</span><span class="nt">u</span><span class="p">&gt;</span>等。
- 不能只回答<span class="p">&lt;</span><span class="nt">img</span><span class="p">&gt;</span>和<span class="p">&lt;</span><span class="nt">a</span><span class="p">&gt;</span>吧！
-</code></pre></div>
-
-<h3>2)常见的块级元素</h3>
-<div class="highlight"><pre><span></span><code><span class="cp">&lt;!--&lt;div&gt;</span> <span class="p">&lt;</span><span class="nt">table</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">form</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>......<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">hr</span><span class="p">&gt;</span>   <span class="p">&lt;</span><span class="nt">pre</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">address</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">center</span><span class="p">&gt;</span> <span class="p">&lt;</span><span class="nt">marquee</span><span class="p">&gt;</span>  <span class="p">&lt;</span><span class="nt">blockquote</span><span class="p">&gt;</span>  等。&gt;
-</code></pre></div>
-
-<h3>3)区别</h3>
-<h4>-块级元素</h4>
-<ol>
-<li>总是从新的一行开始，即各个块级元素独占一行，默认垂直向下排列；</li>
-<li>高度、宽度、margin及padding都是可控的，设置有效，有边距效果；</li>
-<li>宽度没有设置时，默认为100%；</li>
-<li>块级元素中可以包含块级元素和行内元素。</li>
-</ol>
-<h4>-行内元素</h4>
-<ol>
-<li>其他元素都在一行，即行内元素和其他行内元素都会在一条水平线上排列；</li>
-<li>高度、宽度是不可控的，设置无效，由内容决定。</li>
-<li>根据标签语义化的理念，行内元素最好只包含行内元素，不包含块级元素。</li>
-</ol>
-
-
-             
- 
-            
-            
+            <h1>欢迎您的光临，小博客蓬荜生辉</h1>
+<p>这个博客会写一些学习心得，和生活随笔。</p>
             
 
 
@@ -125,37 +80,9 @@
 
 
 
-            <hr/>
         </div>
-        <section id="article-sidebar" class="span2">
-            <h4>Published</h4>
-            <time itemprop="dateCreated" datetime="2023-05-17T10:00:00+08:00">周三 17 五月 2023</time>
-            <h4>Category</h4>
-            <a class="category-link" href="/categories.html#css-ref">Css</a>
-            <h4>Tags</h4>
-            <ul class="list-of-tags tags-in-article">
-                <li><a href="/tags.html#hellciw-ref">hellciw
-                    <span class="superscript">5</span>
-</a></li>
-            </ul>
-<h4>Contact</h4>
-<div id="sidebar-social-link">
-</div>
-            
-
-
-
-
-
-            
-
-
-
-
-
-        </section>
-</div>
-</article>
+    </div>
+    </article>
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
 
@@ -232,8 +159,8 @@
 
 
     <div id="fpowered">
-	@2023China GuangDong   <!--Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
-        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>-->
+        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>

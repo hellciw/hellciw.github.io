@@ -146,8 +146,10 @@ CONNECT方法格式如下</p>
 手动分配方式：客户端的IP地址由网络管理员指定，DHCP服务器只是将一个指定的IP地址告诉主机。
 主要工作原理：DHCP采用UDP发送所有的数据包，主机发送请求到DHCP服务器的68号端口，DHCP服务器再把消息返回给主机的67号端口。</p>
 </blockquote>
-<p><code>1、源物理地址：00:25:11:4e:02:34，目标物理地址：ff:ff:ff:ff:ff:ff:ff，源ip地址：0.0.0.0，目标ip地址：255.255.255.255
-每层协议：Ethernet、IP、UDP、DHCP，传递的内容是让网关分配ip地址</code></p>
+<div class="highlight"><pre><span></span><code>`1、源物理地址：00:25:11:4e:02:34，目标物理地址：ff:ff:ff:ff:ff:ff:ff，源ip地址：0.0.0.0，目标ip地址：255.255.255.255
+每层协议：Ethernet、IP、UDP、DHCP，传递的内容是让网关分配ip地址`
+</code></pre></div>
+
 <h3>ARP协议</h3>
 <blockquote>
 <p>ARP协议（Address Resolution Protocol，地址解析协议）其主要用作将IP地址转换为以太网的MAC地址，在以太网协议中规定，同一局域网中的一台主机要和另一台主机进行直接通信，必须要知道目标主机的MAC地址。而在TCP/IP协议栈中，网络层和传输层只关心目标主机的IP地址。这就导致在以太网中使用IP协议时，数据链路层的以太网协议接到上层IP协议提供的数据中，只包含目的主机的IP地址。于是需要一种方法，根据目的主机的IP地址，获得其MAC地址。这就是ARP协议要做的事情。所谓地址解析（address resolution）就是主机在发送帧前将目标IP地址转换成目标MAC地址的过程。</p>
@@ -158,9 +160,12 @@ CONNECT方法格式如下</p>
 <blockquote>
 <p>HTTP协议（Hypertext Transfer Protocol，超文本传输协议）是用于从WWW服务器传输超文本到本地浏览器的传送协议。它可以使浏览器更加高效，使网络传输减少。</p>
 </blockquote>
-<p><code>3、源物理地址：00:25:11:4e:02:34，目标物理地址：00:04:96:10:64:30，源ip地址：219.222.170.14，目标ip地址：172.30.0.19
-每层协议：Ethernet、IP、TCP、HTTP，传递的内容是访问东莞理工网络中心window服务</code></p>
-<p><code>4、以184分组、73分组为例，DNS、HTTP 的下层支撑协议分别是TCP、UDP。（DNS、HTTP为应用层协议，TCP、UDP为传输层协议)</code></p>
+<div class="highlight"><pre><span></span><code>`3、源物理地址：00:25:11:4e:02:34，目标物理地址：00:04:96:10:64:30，源ip地址：219.222.170.14，目标ip地址：172.30.0.19
+每层协议：Ethernet、IP、TCP、HTTP，传递的内容是访问东莞理工网络中心window服务`
+
+`4、以184分组、73分组为例，DNS、HTTP 的下层支撑协议分别是TCP、UDP。（DNS、HTTP为应用层协议，TCP、UDP为传输层协议)
+</code></pre></div>
+
 <hr>
 <h1>数据链路层</h1>
 <p><a href="https://imgse.com/i/p9CILX4"><img alt="p9CILX4.md.png" src="https://s1.ax1x.com/2023/04/17/p9CILX4.md.png"></a></p>
@@ -328,8 +333,8 @@ CONNECT方法格式如下</p>
 
 
     <div id="fpowered">
-        Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
-        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>
+	@2023China GuangDong   <!--Powered by: <a href="http://getpelican.com/" title="Pelican Home Page" target="_blank" rel="nofollow noopener noreferrer">Pelican</a>
+        Theme: <a href="https://elegant.oncrashreboot.com/" title="Theme Elegant Home Page" target="_blank" rel="nofollow noopener noreferrer">Elegant</a>-->
     </div>
 </footer>            <script src="//code.jquery.com/jquery.min.js"></script>
         <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
