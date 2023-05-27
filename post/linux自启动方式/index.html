@@ -11,10 +11,10 @@
 sudo chmod &#43;x /etc/init.d/myscriptsudo update-rc.d myscript defaults 使用systemd服务：systemd是用于管理系统进程和服务的初始化系统。你可以创建一个自定义的systemd服务单元文件，将其放置在/etc/systemd/system/目录中，并使用systemctl命令启用它。例如，你可以创建一个名为myservice.service的服务单元文件，然后使用以下命令启用它：
 sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中的定时任务管理器。你可以编辑cron表以指定在系统引导时运行的命令或脚本。使用crontab -e命令编辑当前用户的cron表，并添加一个@reboot行来指定在系统引导时执行的命令。例如：
 @reboot /path/to/myscript.sh 请注意，以上这些方法可能在不同的Linux发行版中略有差异。因此，你可能需要根据你所使用的特定发行版进行适当的调整。">
-    <link rel="canonical" href="https://juicebar-demo.add1.dev/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/" />
+    <link rel="canonical" href="https://hellciw.github.io/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     
-    <link rel="stylesheet" href="https://juicebar-demo.add1.dev/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
+    <link rel="stylesheet" href="https://hellciw.github.io/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
 
     <meta property="og:title" content="Linux自启动方式" />
 <meta property="og:description" content="在Linux中，有多种方式可以设置开机自启动。以下是几种常见的方式：
@@ -23,7 +23,7 @@ sudo chmod &#43;x /etc/init.d/myscriptsudo update-rc.d myscript defaults 使用
 sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中的定时任务管理器。你可以编辑cron表以指定在系统引导时运行的命令或脚本。使用crontab -e命令编辑当前用户的cron表，并添加一个@reboot行来指定在系统引导时执行的命令。例如：
 @reboot /path/to/myscript.sh 请注意，以上这些方法可能在不同的Linux发行版中略有差异。因此，你可能需要根据你所使用的特定发行版进行适当的调整。" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://juicebar-demo.add1.dev/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://hellciw.github.io/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-02-18T22:19:13+08:00" />
 <meta property="article:modified_time" content="2023-02-18T22:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
 
@@ -50,7 +50,7 @@ sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中
 
             
             <a id="theme-toggle" class="theme-toggle" href="#">
-                <img src="https://juicebar-demo.add1.dev/svg/sun.svg" alt="sun icon" class="theme-icon" />
+                <img src="https://hellciw.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -106,11 +106,11 @@ sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "https:\/\/juicebar-demo.add1.dev\/svg/moon.svg";
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "https:\/\/juicebar-demo.add1.dev\/svg/sun.svg";
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/sun.svg";
             themeIcon.alt = "sun icon";
         }
         
@@ -249,13 +249,13 @@ sudo update-rc.d myscript defaults
                         <div class="has-text-left">
                             
                             <p>Previous post</p>
-                            <a href="https://juicebar-demo.add1.dev/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue尝试</a>
+                            <a href="https://hellciw.github.io/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue尝试</a>
                             
                         </div>
                         <div class="has-text-right">
                             
                             <p>Next post</p>
-                            <a href="https://juicebar-demo.add1.dev/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/">ICMP数据报</a>
+                            <a href="https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/">ICMP数据报</a>
                             
                         </div>
         </section>
@@ -264,7 +264,7 @@ sudo update-rc.d myscript defaults
 
         </main><footer class="footer">
     <div class="content has-text-centered">
-    <span>&copy; 2023 <a href="https://juicebar-demo.add1.dev/">hellciw</a></span>
+    <span>&copy; 2023 <a href="https://hellciw.github.io/">hellciw</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" target="_blank">Hugo</a> &

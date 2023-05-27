@@ -26,10 +26,10 @@ TRACE 追踪路径，让web服务器端将之前的请求通信环回给客户�
 CONNECT 要求使用隧道协议连接代理。要求在与代理服务器通信时建立隧道，实现隧道协议进行TCP通信。主要使用SSL（安全套接层）和TLS（传输层安全）协议把通信内容加密后经网络隧道传输 CONNECT方法格式如下
 CONNECT 代理服务器名:端口号 HTTP版本
 常用内容编码 gzip（GUN zip） compress（UNIX系统的标准压缩） deflate（zlib） identity（不进行编码） WireShark学习 根据“计算机网络实验.cap”回答以下问题： 1、 第 1 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 2、 第 8 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 3、 第 32 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 4、观察这个记录，以分组 184、73 为例，参考图 2 举例说明 DNS、HTTP 的下层支撑协议。 （重点说明 DNS、HTTP 分别使用那种传输层协议？）">
-    <link rel="canonical" href="https://juicebar-demo.add1.dev/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" />
+    <link rel="canonical" href="https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     
-    <link rel="stylesheet" href="https://juicebar-demo.add1.dev/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
+    <link rel="stylesheet" href="https://hellciw.github.io/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
 
     <meta property="og:title" content="图解HTTP" />
 <meta property="og:description" content="图解HTTP HTTP协议的职责（客户端） 生成针对目标web服务器的HTTP请求报文
@@ -53,7 +53,7 @@ CONNECT 要求使用隧道协议连接代理。要求在与代理服务器通信
 CONNECT 代理服务器名:端口号 HTTP版本
 常用内容编码 gzip（GUN zip） compress（UNIX系统的标准压缩） deflate（zlib） identity（不进行编码） WireShark学习 根据“计算机网络实验.cap”回答以下问题： 1、 第 1 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 2、 第 8 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 3、 第 32 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 4、观察这个记录，以分组 184、73 为例，参考图 2 举例说明 DNS、HTTP 的下层支撑协议。 （重点说明 DNS、HTTP 分别使用那种传输层协议？）" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://juicebar-demo.add1.dev/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
+<meta property="og:url" content="https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2023-02-18T22:19:13+08:00" />
 <meta property="article:modified_time" content="2023-02-18T22:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
 
@@ -95,7 +95,7 @@ CONNECT 代理服务器名:端口号 HTTP版本
 
             
             <a id="theme-toggle" class="theme-toggle" href="#">
-                <img src="https://juicebar-demo.add1.dev/svg/sun.svg" alt="sun icon" class="theme-icon" />
+                <img src="https://hellciw.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
             </a>
 
             <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
@@ -151,11 +151,11 @@ CONNECT 代理服务器名:端口号 HTTP版本
         let themeIcon = document.querySelector(".theme-icon");
         if (theme === "dark") {
             body.classList.add("dark-mode");
-            themeIcon.src = "https:\/\/juicebar-demo.add1.dev\/svg/moon.svg";
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/moon.svg";
             themeIcon.alt = "moon icon";
         } else {
             body.classList.remove("dark-mode");
-            themeIcon.src = "https:\/\/juicebar-demo.add1.dev\/svg/sun.svg";
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/sun.svg";
             themeIcon.alt = "sun icon";
         }
         
@@ -459,7 +459,7 @@ CONNECT方法格式如下</p>
                         <div class="has-text-right">
                             
                             <p>Next post</p>
-                            <a href="https://juicebar-demo.add1.dev/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue尝试</a>
+                            <a href="https://hellciw.github.io/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue尝试</a>
                             
                         </div>
         </section>
@@ -468,7 +468,7 @@ CONNECT方法格式如下</p>
 
         </main><footer class="footer">
     <div class="content has-text-centered">
-    <span>&copy; 2023 <a href="https://juicebar-demo.add1.dev/">hellciw</a></span>
+    <span>&copy; 2023 <a href="https://hellciw.github.io/">hellciw</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" target="_blank">Hugo</a> &
