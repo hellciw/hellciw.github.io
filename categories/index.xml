@@ -6,7 +6,34 @@
     <description>Recent content in Categories on hellciw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 18 May 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 26 May 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title> 网安学习</title>
+      <link>https://hellciw.github.io/categories/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0/</link>
+      <pubDate>Fri, 26 May 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://hellciw.github.io/categories/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ICMP</title>
+      <link>https://hellciw.github.io/categories/icmp/</link>
+      <pubDate>Fri, 26 May 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://hellciw.github.io/categories/icmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://hellciw.github.io/categories/linux/</link>
+      <pubDate>Fri, 26 May 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://hellciw.github.io/categories/linux/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>HTTP</title>
       <link>https://hellciw.github.io/categories/http/</link>

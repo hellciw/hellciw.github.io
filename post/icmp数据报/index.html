@@ -7,7 +7,10 @@
     <title>ICMP数据报 | hellciw</title>
     <meta name="description"
         content="ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
-这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。 总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。 ">
+这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
+在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
+例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
+总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。">
     <link rel="canonical" href="https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     
@@ -15,16 +18,22 @@
 
     <meta property="og:title" content="ICMP数据报" />
 <meta property="og:description" content="ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
-这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。 总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。 " />
+这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
+在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
+例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
+总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2023-02-18T22:19:13+08:00" />
-<meta property="article:modified_time" content="2023-02-18T22:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
+<meta property="article:published_time" content="2023-05-26T22:19:13+08:00" />
+<meta property="article:modified_time" content="2023-05-26T22:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
 
     <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="ICMP数据报"/>
 <meta name="twitter:description" content="ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
-这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。 总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。 "/>
+这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
+在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
+例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
+总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。"/>
 
     
     
@@ -150,7 +159,7 @@
                         
                         <div class="column" >
                             <p>hellciw</p>
-                            <p><time>February 18, 2023</time>
+                            <p><time>May 26, 2023</time>
                             </p>
                         </div>
                     </div>
@@ -172,14 +181,11 @@
 <blockquote>
 <p>Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。
-</span></span></code></pre></div>
+<p>这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。</p>
+<p>在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。</p>
+<p>例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。</p>
+<p>总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。</p>
+
         </div>
     </div><hr style="border-top: 1px solid #EEEEEE;">
 <div id="comment"></div>
@@ -199,8 +205,8 @@
     document.addEventListener("DOMContentLoaded", () => {
         const giscusAttributes = {
             "src": "https://giscus.app/client.js",
-            "data-repo": "hotjuicew\/blog",
-            "data-repo-id": "R_kgDOHHQOuw",
+            "data-repo": "hellciw\/blog",
+            "data-repo-id": "638852724",
             "data-category": "Announcements",
             "data-category-id": "DIC_kwDOHHQOu84CWCQ3",
             "data-mapping": "og:title",
@@ -238,6 +244,9 @@
                             
                         </div>
                         <div class="has-text-right">
+                            
+                            <p>Next post</p>
+                            <a href="https://hellciw.github.io/post/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0/"> 网安学习</a>
                             
                         </div>
         </section>

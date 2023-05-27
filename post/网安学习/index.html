@@ -1,0 +1,456 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title> 网安学习 | hellciw</title>
+    <meta name="description"
+        content="网络安全学习路线 一、BurpSuite学习 1、使用浏览器给burp代理，进行拦截，获得数据，然后改文件名字或者MIME，达到符合前后端的过滤要求，等文件成功传输到后端，再用菜刀链接。
+2、用BurpSuite扫描网站可以知道有哪些漏洞
+二、CIFS服务器（类似ftp服务器） 打开cmd，输入\，打开CIFS，输入ip即可
+三、 DHCP部署和安全 DHCP作用（自动分配IP地址） 地址池/作用域：（IP，子网掩码，网关，DNS，租期）， DHCP优点：减少工作量，避免IP冲突，提高地址利用率
+DHCP 协议端口是:UDP 67,68 DHCP原理（DHCP租约过程） 分为4个步骤：
+1）发送DHCP Discovery 广播包 客户机广播请求IP地址（包含客户机的MAC地址）
+2）响应DHCP Offer广播包 服务器响应提供的IP地址（但无子网掩码、网关等参数）
+3）发送DHCP Request广播包 客户机选择IP（也可认为确认使用哪个IP）
+4）服务器发送DHCP ACK 广播包 服务器确定了租约，并提供网卡详细参数IP、掩码，网关、DNS、租期等
+DHCP续约 50%时间过后，客户机会再次发送DHCP Request包，进行续约，如果服务器无响应，则继续使用并在87.5%，再次发送DCHP Request包，进行续约，如X任然无响应，并释放IP地址，及重新发送DHCP Discovery 广播包来获取IP地址，当无任何服务器响应是，自动给自己分配一个169.254.x.x/16，全球统一无效地址，用于临时内网通信！
+部署DHCP服务器 客户机验证：
+ipconfig /release 释放IP（取消租约，或者改为手动配置IP,也可以释放租约）ipconfig /renew 重新获取IP（有IP时，发送Request续约，无IP时，发送Discovery重新获取） 地址保留 对指定的MAC地址，固定动态分配IP地址
+DHCP 攻击与防御 1）攻击DHCP服务器： 频繁的发送伪装DHCP请求，直到将DHCP地址池资源耗尽
+防御：在交换机（管理型）端口上做动态MAC地址绑定
+2）伪装DHCP 服务器攻击： hack通过将自己部署的DHCP服务器，为客户及提供非法IP
+防御：在交换机上（管理型），除合法的DHCP服务器所在的接口外，全部设置为禁止发送DHCP Offer包
+四、DNS部署与安全 DNS Domain Name Service（域名服务）作用：为客户机提供域名解析服务
+域名组成 www.baidu.com.. 为根域.com 为顶级域baidu 为一级域名www 为主机名 FQDN=主机名.">
+    <link rel="canonical" href="https://hellciw.github.io/post/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    
+    <link rel="stylesheet" href="https://hellciw.github.io/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
+
+    <meta property="og:title" content=" 网安学习" />
+<meta property="og:description" content="网络安全学习路线 一、BurpSuite学习 1、使用浏览器给burp代理，进行拦截，获得数据，然后改文件名字或者MIME，达到符合前后端的过滤要求，等文件成功传输到后端，再用菜刀链接。
+2、用BurpSuite扫描网站可以知道有哪些漏洞
+二、CIFS服务器（类似ftp服务器） 打开cmd，输入\，打开CIFS，输入ip即可
+三、 DHCP部署和安全 DHCP作用（自动分配IP地址） 地址池/作用域：（IP，子网掩码，网关，DNS，租期）， DHCP优点：减少工作量，避免IP冲突，提高地址利用率
+DHCP 协议端口是:UDP 67,68 DHCP原理（DHCP租约过程） 分为4个步骤：
+1）发送DHCP Discovery 广播包 客户机广播请求IP地址（包含客户机的MAC地址）
+2）响应DHCP Offer广播包 服务器响应提供的IP地址（但无子网掩码、网关等参数）
+3）发送DHCP Request广播包 客户机选择IP（也可认为确认使用哪个IP）
+4）服务器发送DHCP ACK 广播包 服务器确定了租约，并提供网卡详细参数IP、掩码，网关、DNS、租期等
+DHCP续约 50%时间过后，客户机会再次发送DHCP Request包，进行续约，如果服务器无响应，则继续使用并在87.5%，再次发送DCHP Request包，进行续约，如X任然无响应，并释放IP地址，及重新发送DHCP Discovery 广播包来获取IP地址，当无任何服务器响应是，自动给自己分配一个169.254.x.x/16，全球统一无效地址，用于临时内网通信！
+部署DHCP服务器 客户机验证：
+ipconfig /release 释放IP（取消租约，或者改为手动配置IP,也可以释放租约）ipconfig /renew 重新获取IP（有IP时，发送Request续约，无IP时，发送Discovery重新获取） 地址保留 对指定的MAC地址，固定动态分配IP地址
+DHCP 攻击与防御 1）攻击DHCP服务器： 频繁的发送伪装DHCP请求，直到将DHCP地址池资源耗尽
+防御：在交换机（管理型）端口上做动态MAC地址绑定
+2）伪装DHCP 服务器攻击： hack通过将自己部署的DHCP服务器，为客户及提供非法IP
+防御：在交换机上（管理型），除合法的DHCP服务器所在的接口外，全部设置为禁止发送DHCP Offer包
+四、DNS部署与安全 DNS Domain Name Service（域名服务）作用：为客户机提供域名解析服务
+域名组成 www.baidu.com.. 为根域.com 为顶级域baidu 为一级域名www 为主机名 FQDN=主机名." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hellciw.github.io/post/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-05-26T22:19:13+08:00" />
+<meta property="article:modified_time" content="2023-05-26T22:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content=" 网安学习"/>
+<meta name="twitter:description" content="网络安全学习路线 一、BurpSuite学习 1、使用浏览器给burp代理，进行拦截，获得数据，然后改文件名字或者MIME，达到符合前后端的过滤要求，等文件成功传输到后端，再用菜刀链接。
+2、用BurpSuite扫描网站可以知道有哪些漏洞
+二、CIFS服务器（类似ftp服务器） 打开cmd，输入\，打开CIFS，输入ip即可
+三、 DHCP部署和安全 DHCP作用（自动分配IP地址） 地址池/作用域：（IP，子网掩码，网关，DNS，租期）， DHCP优点：减少工作量，避免IP冲突，提高地址利用率
+DHCP 协议端口是:UDP 67,68 DHCP原理（DHCP租约过程） 分为4个步骤：
+1）发送DHCP Discovery 广播包 客户机广播请求IP地址（包含客户机的MAC地址）
+2）响应DHCP Offer广播包 服务器响应提供的IP地址（但无子网掩码、网关等参数）
+3）发送DHCP Request广播包 客户机选择IP（也可认为确认使用哪个IP）
+4）服务器发送DHCP ACK 广播包 服务器确定了租约，并提供网卡详细参数IP、掩码，网关、DNS、租期等
+DHCP续约 50%时间过后，客户机会再次发送DHCP Request包，进行续约，如果服务器无响应，则继续使用并在87.5%，再次发送DCHP Request包，进行续约，如X任然无响应，并释放IP地址，及重新发送DHCP Discovery 广播包来获取IP地址，当无任何服务器响应是，自动给自己分配一个169.254.x.x/16，全球统一无效地址，用于临时内网通信！
+部署DHCP服务器 客户机验证：
+ipconfig /release 释放IP（取消租约，或者改为手动配置IP,也可以释放租约）ipconfig /renew 重新获取IP（有IP时，发送Request续约，无IP时，发送Discovery重新获取） 地址保留 对指定的MAC地址，固定动态分配IP地址
+DHCP 攻击与防御 1）攻击DHCP服务器： 频繁的发送伪装DHCP请求，直到将DHCP地址池资源耗尽
+防御：在交换机（管理型）端口上做动态MAC地址绑定
+2）伪装DHCP 服务器攻击： hack通过将自己部署的DHCP服务器，为客户及提供非法IP
+防御：在交换机上（管理型），除合法的DHCP服务器所在的接口外，全部设置为禁止发送DHCP Offer包
+四、DNS部署与安全 DNS Domain Name Service（域名服务）作用：为客户机提供域名解析服务
+域名组成 www.baidu.com.. 为根域.com 为顶级域baidu 为一级域名www 为主机名 FQDN=主机名."/>
+
+    
+    
+    
+
+</head><body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>hellciw</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://hellciw.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/about" class="navbar-item">About</a>
+                
+                <a href="/post" class="navbar-item">Blog</a>
+                
+                <a href="/categories" class="navbar-item">Categories</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search..">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+<div class="single-container">
+    <div class="archive">
+        <h1 class="title is-1"> 网安学习</h1>
+        <div class="title subtitle heading is-6">
+            <div class="author-info columns is-vcentered">
+                <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        
+                        <div class="column is-narrow">
+                            <img src="/images/profile.jpg" class="author-image">
+                        </div>
+                        
+                        <div class="column" >
+                            <p>hellciw</p>
+                            <p><time>May 26, 2023</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-categories-container">
+                    <a
+                        href="/categories/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0"> 网安学习</a>
+                </div>
+            </div>
+        </div>
+        <div class="content article-content">
+            <div class="toc-container">
+                
+    <div class="post-toc">
+        
+            <aside>
+                <h4 style="margin-left: 1vw;">CONTENTS</h4><nav id="TableOfContents">
+  <ul>
+    <li><a href="#网络安全学习路线">网络安全学习路线</a></li>
+    <li><a href="#一burpsuite学习">一、BurpSuite学习</a></li>
+    <li><a href="#二cifs服务器类似ftp服务器">二、CIFS服务器（类似ftp服务器）</a></li>
+    <li><a href="#三-dhcp部署和安全">三、 DHCP部署和安全</a>
+      <ul>
+        <li></li>
+        <li><a href="#dhcp原理dhcp租约过程">DHCP原理（DHCP租约过程）</a></li>
+        <li><a href="#dhcp续约">DHCP续约</a></li>
+        <li><a href="#部署dhcp服务器">部署DHCP服务器</a></li>
+        <li><a href="#地址保留">地址保留</a></li>
+        <li><a href="#dhcp-攻击与防御">DHCP 攻击与防御</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#dns">DNS</a></li>
+        <li><a href="#域名组成">域名组成</a></li>
+        <li><a href="#监听端口">监听端口</a></li>
+        <li><a href="#dns解析种类">DNS解析种类</a></li>
+      </ul>
+    </li>
+  </ul>
+
+  <ul>
+    <li><a href="#1ip信息收集">1、ip信息收集</a></li>
+    <li><a href="#2域名信息收集">2、域名信息收集</a></li>
+    <li><a href="#3服务器信息收集">3、服务器信息收集</a></li>
+    <li><a href="#4网站信息收集">4、网站信息收集</a>
+      <ul>
+        <li><a href="#谷歌搜索语法">谷歌搜索语法</a></li>
+        <li><a href="#网站容器nmap扫描">网站容器（nmap扫描）</a></li>
+        <li><a href="#数据库类型">数据库类型</a></li>
+        <li><a href="#敏感目录爆破">敏感目录爆破</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></aside>
+        
+    </div>
+                </div>
+            <h2 id="网络安全学习路线">网络安全学习路线</h2>
+<p><a href="https://imgse.com/i/p9iwnpt"><img src="https://s1.ax1x.com/2023/04/18/p9iwnpt.jpg" alt="p9iwnpt.jpg"></a></p>
+<h2 id="一burpsuite学习">一、BurpSuite学习</h2>
+<p>1、使用浏览器给burp代理，进行拦截，获得数据，然后改文件名字或者MIME，达到符合前后端的过滤要求，等文件成功传输到后端，再用菜刀链接。</p>
+<p>2、用BurpSuite扫描网站可以知道有哪些漏洞</p>
+<h2 id="二cifs服务器类似ftp服务器">二、CIFS服务器（类似ftp服务器）</h2>
+<p>打开cmd，输入\，打开CIFS，输入ip即可</p>
+<h2 id="三-dhcp部署和安全">三、 DHCP部署和安全</h2>
+<p>DHCP作用（自动分配IP地址）
+地址池/作用域：（IP，子网掩码，网关，DNS，租期），
+DHCP优点：减少工作量，避免IP冲突，提高地址利用率</p>
+<h4 id="dhcp-协议端口是udp-6768">DHCP 协议端口是:UDP 67,68</h4>
+<h3 id="dhcp原理dhcp租约过程">DHCP原理（DHCP租约过程）</h3>
+<p>分为4个步骤：</p>
+<h4 id="1发送dhcp-discovery-广播包">1）发送DHCP Discovery 广播包</h4>
+<p>客户机广播请求IP地址（包含客户机的MAC地址）</p>
+<h4 id="2响应dhcp-offer广播包">2）响应DHCP Offer广播包</h4>
+<p>服务器响应提供的IP地址（但无子网掩码、网关等参数）</p>
+<h4 id="3发送dhcp-request广播包">3）发送DHCP Request广播包</h4>
+<p>客户机选择IP（也可认为确认使用哪个IP）</p>
+<h4 id="4服务器发送dhcp-ack-广播包">4）服务器发送DHCP ACK 广播包</h4>
+<p>服务器确定了租约，并提供网卡详细参数IP、掩码，网关、DNS、租期等</p>
+<h3 id="dhcp续约">DHCP续约</h3>
+<p>50%时间过后，客户机会再次发送DHCP Request包，进行续约，如果服务器无响应，则继续使用并在87.5%，再次发送DCHP Request包，进行续约，如X任然无响应，并释放IP地址，及重新发送DHCP Discovery 广播包来获取IP地址，当无任何服务器响应是，自动给自己分配一个169.254.x.x/16，全球统一无效地址，用于临时内网通信！</p>
+<h3 id="部署dhcp服务器">部署DHCP服务器</h3>
+<p>客户机验证：</p>
+<pre tabindex="0"><code>ipconfig /release  释放IP（取消租约，或者改为手动配置IP,也可以释放租约）
+ipconfig /renew    重新获取IP（有IP时，发送Request续约，无IP时，发送Discovery重新获取）
+</code></pre><h3 id="地址保留">地址保留</h3>
+<p>对指定的MAC地址，固定动态分配IP地址</p>
+<h3 id="dhcp-攻击与防御">DHCP 攻击与防御</h3>
+<h4 id="1攻击dhcp服务器">1）攻击DHCP服务器：</h4>
+<p>频繁的发送伪装DHCP请求，直到将DHCP地址池资源耗尽</p>
+<p>防御：在交换机（管理型）端口上做动态MAC地址绑定</p>
+<h4 id="2伪装dhcp-服务器攻击">2）伪装DHCP 服务器攻击：</h4>
+<p>hack通过将自己部署的DHCP服务器，为客户及提供非法IP</p>
+<p>防御：在交换机上（管理型），除合法的DHCP服务器所在的接口外，全部设置为禁止发送DHCP Offer包</p>
+<h1 id="四dns部署与安全">四、DNS部署与安全</h1>
+<h3 id="dns">DNS</h3>
+<p>Domain Name Service（域名服务）作用：为客户机提供域名解析服务</p>
+<h3 id="域名组成">域名组成</h3>
+<pre tabindex="0"><code>www.baidu.com.
+. 为根域
+.com 为顶级域
+baidu 为一级域名
+www 为主机名
+</code></pre><pre tabindex="0"><code>FQDN=主机名.DNS后缀
+FQDN（完整合格的域名）
+</code></pre><h3 id="监听端口">监听端口</h3>
+<pre tabindex="0"><code>TCP53
+UDP53
+</code></pre><h3 id="dns解析种类">DNS解析种类</h3>
+<h4 id="1按查询方式分类">1、按查询方式分类</h4>
+<p>1）迭代查询</p>
+<p>2）递归查询</p>
+<h4 id="2按查询内容分类">2、按查询内容分类</h4>
+<p>1）正向解析：已知域名，解析IP地址</p>
+<p>2）反向解析：已知IP地址，解析域名</p>
+<h1 id="五信息收集">五、信息收集</h1>
+<h2 id="1ip信息收集">1、ip信息收集</h2>
+<h2 id="2域名信息收集">2、域名信息收集</h2>
+<p>收集子域名</p>
+<h2 id="3服务器信息收集">3、服务器信息收集</h2>
+<p>收集常用端口号</p>
+<h2 id="4网站信息收集">4、网站信息收集</h2>
+<h3 id="谷歌搜索语法">谷歌搜索语法</h3>
+<blockquote>
+<p>site功能：搜索指定的域名网页内容，子网和网页相关的
+site:网站 “你要的信息”
+site:zhihu.com“web安全”</p>
+</blockquote>
+<blockquote>
+<p>filetype功能：搜索指定的文件类型
+filetype:pdf “你要的信息”
+filetype:ppt“你要的信息”
+site:zhihu.com filetype:pdf“你要的信息”	———在zhihu网站里搜索pdf</p>
+</blockquote>
+<blockquote>
+<p>inurl功能：搜索url网址存在特定关键字的网页，可以用来搜寻有注入点的网站
+inurl:.php?id=		——搜索网址中有“php?id”的网页
+inurl:view.php=?		——搜索网址中有“view.php=”的网页
+inurl:.jsp?id=		——搜索网址中有“.jsp?id”的网页
+inurl:.asp?id=		——搜索网址中有“asp?id”的网页
+inurl:/admin/login.php	——搜索网址中有“/admin/login.php”的网页
+inurl:login		——搜索网址中有“login”的网页</p>
+</blockquote>
+<blockquote>
+<p>intitle功能：搜索标题存在特定关键字的网页
+intitle：后台登录			——搜索网址中是“后台登录”的网页
+intitle：后台登录 filetype:php		——搜索网址中是“后台登录”的php网页
+intitle：index of “keymord”		——搜索网址中关键字“keymord”的网页
+intitle：index of “parent directory”	——搜索根目录 相关的索引目录信息
+intitle：index of “password”		——搜索密码相关的索引目录信息
+intitle：index of “login”		——搜索登录页面的信息
+intitle：index of “admin”		——搜索后台登录页面信息</p>
+</blockquote>
+<blockquote>
+<p>intext功能：搜索正文存在特定关键字的网页
+intext：powered by Discuz		——搜索Discuz论坛相关的页面
+intext：powered by wordpress	——搜索wordpress制作的博客网址
+intext：powered by <em>cms		——搜索</em>CMS相关的页面
+intext：powered by xxx inurl：login	——搜索此类网址的后台登录页面</p>
+</blockquote>
+<hr>
+<h3 id="网站容器nmap扫描">网站容器（nmap扫描）</h3>
+<pre tabindex="0"><code>扫描一般用的： （1）主机发现：nmap -sn 地址/24
+			 （2）端口扫描：nmap -sS  地址
+			 （3）系统扫描：nmap -o 地址
+			 （4）版本扫描：nmap -sV 地址
+			 （5）综合扫描：nmap -A 地址
+</code></pre><h3 id="数据库类型">数据库类型</h3>
+<pre tabindex="0"><code>常见搭配：
+ASP 和 ASPX 网站搭建：ACCESS、SQL Server （数据库）
+PHP 网站搭建：MySQL、PostgreSQL （数据库）
+JSP 网站搭建：Oracle、MySQL （数据库）
+</code></pre><h3 id="敏感目录爆破">敏感目录爆破</h3>
+<p>1、dirb工具，2、御剑，3、7KBwebpathBurute</p>
+
+        </div>
+    </div><hr style="border-top: 1px solid #EEEEEE;">
+<div id="comment"></div>
+<script>
+    const getStoredTheme = () => localStorage.getItem("theme") === "dark" ? "dark" : "light";
+
+    const setGiscusTheme = () => {
+        const sendMessage = (message) => {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (iframe) {
+                iframe.contentWindow.postMessage({giscus: message}, 'https://giscus.app');
+            }
+        }
+        sendMessage({setConfig: {theme: getStoredTheme()}})
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const giscusAttributes = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "hellciw\/blog",
+            "data-repo-id": "638852724",
+            "data-category": "Announcements",
+            "data-category-id": "DIC_kwDOHHQOu84CWCQ3",
+            "data-mapping": "og:title",
+            "data-reactions-enabled": "1",
+            "data-emit-metadata": "0",
+            "data-input-position": "bottom",
+            "data-theme": getStoredTheme(),
+            "data-lang": "en",
+            "data-loading": "lazy",
+            "crossorigin": "anonymous",
+        };
+
+        
+        const giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(
+            ([key, value]) => giscusScript.setAttribute(key, value));
+        document.getElementById("comment").appendChild(giscusScript);
+
+        
+        const themeToggle = document.querySelector(".theme-toggle");
+        if (themeToggle) {
+            themeToggle.addEventListener("click", setGiscusTheme);
+        }
+    });
+
+</script>
+
+
+<div class="pp-container">
+        <section class="pre-and-post">
+                        <div class="has-text-left">
+                            
+                            <p>Previous post</p>
+                            <a href="https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/">ICMP数据报</a>
+                            
+                        </div>
+                        <div class="has-text-right">
+                            
+                        </div>
+        </section>
+    </div>
+</div>
+
+        </main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>&copy; 2023 <a href="https://hellciw.github.io/">hellciw</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" target="_blank">Hugo</a> &
+        <a href="https://github.com/hotjuicew/hugo-JuiceBar" target="_blank">JuiceBar</a>
+    </span>
+    </div>
+  </footer></body>
+</html>
+
