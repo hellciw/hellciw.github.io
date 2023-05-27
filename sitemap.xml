@@ -2,6 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hellciw.github.io/about/</loc>
+    <lastmod>2023-05-01T20:18:54+03:00</lastmod>
+  </url><url>
     <loc>https://hellciw.github.io/categories/</loc>
     <lastmod>2023-02-18T22:19:13+08:00</lastmod>
   </url><url>
@@ -34,8 +37,5 @@
   </url><url>
     <loc>https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</loc>
     <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/about/</loc>
-    <lastmod>2019-04-26T20:18:54+03:00</lastmod>
   </url>
 </urlset>

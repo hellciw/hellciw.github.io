@@ -8,6 +8,15 @@
     <language>en</language>
     <lastBuildDate>Sat, 18 Feb 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>About Me</title>
+      <link>https://hellciw.github.io/about/</link>
+      <pubDate>Mon, 01 May 2023 20:18:54 +0300</pubDate>
+      
+      <guid>https://hellciw.github.io/about/</guid>
+      <description>欢迎您的光临，小博客蓬荜生辉 这个博客会写一些学习心得，和生活随笔。 </description>
+    </item>
+    
+    <item>
       <title>ICMP数据报</title>
       <link>https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</link>
       <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
@@ -66,15 +75,6 @@ TRACE 追踪路径，让web服务器端将之前的请求通信环回给客户�
 CONNECT 要求使用隧道协议连接代理。要求在与代理服务器通信时建立隧道，实现隧道协议进行TCP通信。主要使用SSL（安全套接层）和TLS（传输层安全）协议把通信内容加密后经网络隧道传输 CONNECT方法格式如下
 CONNECT 代理服务器名:端口号 HTTP版本
 常用内容编码 gzip（GUN zip） compress（UNIX系统的标准压缩） deflate（zlib） identity（不进行编码） WireShark学习 根据“计算机网络实验.cap”回答以下问题： 1、 第 1 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 2、 第 8 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 3、 第 32 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 4、观察这个记录，以分组 184、73 为例，参考图 2 举例说明 DNS、HTTP 的下层支撑协议。 （重点说明 DNS、HTTP 分别使用那种传输层协议？）</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>https://hellciw.github.io/about/</link>
-      <pubDate>Fri, 26 Apr 2019 20:18:54 +0300</pubDate>
-      
-      <guid>https://hellciw.github.io/about/</guid>
-      <description>欢迎您的光临，小博客蓬荜生辉 这个博客会写一些学习心得，和生活随笔。 </description>
     </item>
     
   </channel>
