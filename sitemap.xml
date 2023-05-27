@@ -2,40 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://hellciw.github.io/categories/</loc>
+    <lastmod>2023-05-18T22:19:13+08:00</lastmod>
+  </url><url>
+    <loc>https://hellciw.github.io/</loc>
+    <lastmod>2023-05-18T22:19:13+08:00</lastmod>
+  </url><url>
+    <loc>https://hellciw.github.io/categories/http/</loc>
+    <lastmod>2023-05-18T22:19:13+08:00</lastmod>
+  </url><url>
+    <loc>https://hellciw.github.io/post/</loc>
+    <lastmod>2023-05-18T22:19:13+08:00</lastmod>
+  </url><url>
+    <loc>https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</loc>
+    <lastmod>2023-05-18T22:19:13+08:00</lastmod>
+  </url><url>
     <loc>https://hellciw.github.io/about/</loc>
     <lastmod>2023-05-01T20:18:54+03:00</lastmod>
   </url><url>
-    <loc>https://hellciw.github.io/categories/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/categories/http/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/categories/icmp/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/categories/linux/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/post/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
     <loc>https://hellciw.github.io/categories/vue/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
+    <lastmod>2023-05-01T22:19:13+08:00</lastmod>
   </url><url>
     <loc>https://hellciw.github.io/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
-  </url><url>
-    <loc>https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2023-02-18T22:19:13+08:00</lastmod>
+    <lastmod>2023-05-01T22:19:13+08:00</lastmod>
   </url>
 </urlset>

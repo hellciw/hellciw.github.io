@@ -205,81 +205,6 @@
   <div class="single-container column is-centered">
     <div class="archive" id="post-container">
       <header class="post-header">
-        <h1 class="post-title hover-underline-animation"><a class="post-link" href="/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/">ICMP数据报</a></h1>
-       
-       
-      </header>
-      <div class="post-content">
-        <div class="excerpt post-summary">
-          ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
-这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。 总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。 
-        </div>
-        
-        <div class="post-time-container">
-          <span class="post-time"> 2023-02-18 </span>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</article>
-
-    
-        <article class="post">
-  <div class="single-container column is-centered">
-    <div class="archive" id="post-container">
-      <header class="post-header">
-        <h1 class="post-title hover-underline-animation"><a class="post-link" href="/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/">Linux自启动方式</a></h1>
-       
-       
-      </header>
-      <div class="post-content">
-        <div class="excerpt post-summary">
-          在Linux中，有多种方式可以设置开机自启动。以下是几种常见的方式：
-使用init.d或rc.d脚本：在/etc/init.d/或/etc/rc.d/目录中，你可以创建一个启动脚本，并使用特定的命名约定（如以&quot;S&quot;开头并在其后跟一个数字来定义启动顺序）。这些脚本将在系统引导过程中自动执行。例如，你可以将启动脚本放在/etc/init.d/myscript，然后使用以下命令将其添加到启动过程中：
-sudo chmod +x /etc/init.d/myscriptsudo update-rc.d myscript defaults 使用systemd服务：systemd是用于管理系统进程和服务的初始化系统。你可以创建一个自定义的systemd服务单元文件，将其放置在/etc/systemd/system/目录中，并使用systemctl命令启用它。例如，你可以创建一个名为myservice.service的服务单元文件，然后使用以下命令启用它：
-sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中的定时任务管理器。你可以编辑cron表以指定在系统引导时运行的命令或脚本。使用crontab -e命令编辑当前用户的cron表，并添加一个@reboot行来指定在系统引导时执行的命令。例如：
-@reboot /path/to/myscript.sh 请注意，以上这些方法可能在不同的Linux发行版中略有差异。因此，你可能需要根据你所使用的特定发行版进行适当的调整。
-        </div>
-        
-        <div class="post-time-container">
-          <span class="post-time"> 2023-02-18 </span>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</article>
-
-    
-        <article class="post">
-  <div class="single-container column is-centered">
-    <div class="archive" id="post-container">
-      <header class="post-header">
-        <h1 class="post-title hover-underline-animation"><a class="post-link" href="/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue尝试</a></h1>
-       
-       
-      </header>
-      <div class="post-content">
-        <div class="excerpt post-summary">
-          Vue学习笔记 一、二维数组尝试 var vm = new Vue({ el: &#34;#app&#34;, data: { huilv:[ [6.8540, 132.9787, 1298.7013, 1.3278], [6.8540, 132.9787, 1298.7013, 1.3278] ],} 二、watch监听实现 watch: {first: function(newValue) {this.second = newValue * this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];},second: function(newValue) {this.first = newValue / this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];}} 三、数组的更新检测 #变更方法 Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：
-push() pop() shift() unshift() splice() sort() reverse() 你可以打开控制台，然后对前面例子的 items 数组尝试调用变更方法。比如 example1.items.push({ message: 'Baz' })。
-        </div>
-        
-        <div class="post-time-container">
-          <span class="post-time"> 2023-02-18 </span>
-        </div>
-      </div>
-      
-    </div>
-  </div>
-</article>
-
-    
-        <article class="post">
-  <div class="single-container column is-centered">
-    <div class="archive" id="post-container">
-      <header class="post-header">
         <h1 class="post-title hover-underline-animation"><a class="post-link" href="/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/">图解HTTP</a></h1>
        
        
@@ -309,7 +234,31 @@ CONNECT 代理服务器名:端口号 HTTP版本
         </div>
         
         <div class="post-time-container">
-          <span class="post-time"> 2023-02-18 </span>
+          <span class="post-time"> 2023-05-18 </span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</article>
+
+    
+        <article class="post">
+  <div class="single-container column is-centered">
+    <div class="archive" id="post-container">
+      <header class="post-header">
+        <h1 class="post-title hover-underline-animation"><a class="post-link" href="/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Vue尝试</a></h1>
+       
+       
+      </header>
+      <div class="post-content">
+        <div class="excerpt post-summary">
+          Vue学习笔记 一、二维数组尝试 var vm = new Vue({ el: &#34;#app&#34;, data: { huilv:[ [6.8540, 132.9787, 1298.7013, 1.3278], [6.8540, 132.9787, 1298.7013, 1.3278] ],} 二、watch监听实现 watch: {first: function(newValue) {this.second = newValue * this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];},second: function(newValue) {this.first = newValue / this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];}} 三、数组的更新检测 #变更方法 Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：
+push() pop() shift() unshift() splice() sort() reverse() 你可以打开控制台，然后对前面例子的 items 数组尝试调用变更方法。比如 example1.items.push({ message: 'Baz' })。
+        </div>
+        
+        <div class="post-time-container">
+          <span class="post-time"> 2023-05-01 </span>
         </div>
       </div>
       

@@ -6,11 +6,11 @@
     <description>Recent content in HTTP on hellciw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 18 Feb 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/categories/http/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 18 May 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/categories/http/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图解HTTP</title>
       <link>https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</link>
-      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      <pubDate>Thu, 18 May 2023 22:19:13 +0800</pubDate>
       
       <guid>https://hellciw.github.io/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</guid>
       <description>图解HTTP HTTP协议的职责（客户端） 生成针对目标web服务器的HTTP请求报文
