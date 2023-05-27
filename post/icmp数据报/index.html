@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-    <title>ICMP数据报 | hellciw</title>
+    <title>ICMP数据报Identifier中BE和LE的区别 | hellciw</title>
     <meta name="description"
-        content="ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
+        content="Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
 这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
@@ -16,8 +16,8 @@
     
     <link rel="stylesheet" href="https://hellciw.github.io/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
 
-    <meta property="og:title" content="ICMP数据报" />
-<meta property="og:description" content="ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
+    <meta property="og:title" content="ICMP数据报Identifier中BE和LE的区别" />
+<meta property="og:description" content="Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
 这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
@@ -28,8 +28,8 @@
 <meta property="article:modified_time" content="2023-05-26T22:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
 
     <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="ICMP数据报"/>
-<meta name="twitter:description" content="ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
+<meta name="twitter:title" content="ICMP数据报Identifier中BE和LE的区别"/>
+<meta name="twitter:description" content="Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
 这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
@@ -147,7 +147,7 @@
 </header><main>
 <div class="single-container">
     <div class="archive">
-        <h1 class="title is-1">ICMP数据报</h1>
+        <h1 class="title is-1">ICMP数据报Identifier中BE和LE的区别</h1>
         <div class="title subtitle heading is-6">
             <div class="author-info columns is-vcentered">
                 <div class="column">
@@ -177,8 +177,7 @@
         
     </div>
                 </div>
-            <h2 id="icmp数据报">ICMP数据报</h2>
-<blockquote>
+            <blockquote>
 <p>Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下</p>
 </blockquote>
 <p>这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。</p>

@@ -6,7 +6,42 @@
     <description>Recent content in Posts on hellciw</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 26 May 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 May 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ICMP数据报ping命令</title>
+      <link>https://hellciw.github.io/post/ping%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 27 May 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://hellciw.github.io/post/ping%E5%91%BD%E4%BB%A4/</guid>
+      <description>Q: 结合实例“ping www.sina.com”给出 ping 命令的原理。
+Ping命令是一种常用的网络诊断工具，可以检测主机之间的联通性，测试网络连接速度和带宽使用情况。该命令发送一个数据包到目标主机，然后等待该主机响应，并记录来自目标主机的回复时间和信息，以供分析使用。
+例如，在命令行中运行“ping www.sina.com”，我们可以看到我们的计算机向新浪网站发送了一个数据包，网站以回复给我们，这里如果想更准确的说明原理，我们需要在网络模型中进行解释，简化地将其分为以下几个步骤：
+应用层：用户在终端设备输入ping命令并按下回车，操作系统通过应用层协议将输入的命令传递给传输层。
+传输层：操作系统通过传输层协议将ping命令和其他必要信息打包成域数据报并发往底层网络。此处一般使用ICMP协议。
+网络层：DNS服务负责将www.sina.com解析为其对应的IP地址，并告诉我们的计算机。
+数据链路和物理层：数据包被转化为数据流，并在网络上通过一系列数据链路和物理层传输，最终抵达目标主机。
+目标主机收到数据包，操作系统将回复包打包成数据帧并通过网络发往我们的计算机。
+返回数据经过数据链路和物理层传输，最终抵达我们的计算机，操作系统将其解析为人们可读的格式并在命令行中输出。
+Ping命令利用了ICMP数据报协议，通过给目标主机发送数据包和等待其回复，来检测网络连接和其他问题的存在，并记录网络性能以供诊断使用。</description>
+    </item>
+    
+    <item>
+      <title>ICMP数据报tracert命令</title>
+      <link>https://hellciw.github.io/post/tracert%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Sat, 27 May 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://hellciw.github.io/post/tracert%E5%91%BD%E4%BB%A4/</guid>
+      <description>Q: 结合实例“tracert www.163.com”给出 tracert 命令的原理。
+tracert命令是一款常用的网络诊断工具，它可以追踪Internet上从一个起始点到达另一个目的地的路由路径，并显示每个跃点的延迟时间。当我们执行“tracert www.163.com”的时候，操作系统就会发送一系列的数据包探测从本机到目标地址的路由，其中包括访问的每个信号跳跃点的详细信息。接下来，我将简要介绍一下“tracert”命令的原理。
+应用层：用户在终端设备输入tracert命令并按下回车，操作系统通过应用层协议将输入的命令传递给传输层。
+传输层：操作系统通过传输层协议将tracert命令和其他必要信息打包成域数据报并发往底层网络。此处一般使用ICMP协议。
+网络层：DNS服务负责将www.163.com解析为其对应的IP地址，并告诉我们的计算机。
+数据链路和物理层：数据包被转化为数据流，并在网络上通过一系列数据链路和物理层传输，最终抵达目标主机。
+目标主机收到数据包并返回结果，但是这个时候 tracert 命令不会停止工作；删除不在路由路径中的信息，并继续向远程主机发送数据包。当跃点信息关于目标系统返回时，则显示到终端上。
+返回数据经过数据链路和物理层传输，最终抵达我们的计算机，操作系统将其解析为人们可读的格式并在命令行中输出。
+总之，“tracert”命令利用ICMP协议特别设计的“时间超时”机制，通过发送数据包，跟踪这些数据包经过的每个路由器，最终确定到达目标地址所需的最佳路线。逐级探测路由器的原理是基于TTL值（Time to Live），它告诉路由跳出期限已过期的报文需要被丢弃。该信息源于每个传输包中的IP头部，一开始被设定成一定的值，中转节点的路由器在收到此类数据包后，会减1并再次转发给下一跃点，这样每一个中转节点就会更新TTL值，直到最后一个到达目的地址。这些来回传输的数据包的交互过程显示了网络连接的性能和路由可能出现的问题，帮助管理员更好地诊断和修复网络问题。</description>
+    </item>
+    
     <item>
       <title> 网安学习</title>
       <link>https://hellciw.github.io/post/%E7%BD%91%E5%AE%89%E5%AD%A6%E4%B9%A0/</link>
@@ -34,12 +69,12 @@ DHCP 攻击与防御 1）攻击DHCP服务器： 频繁的发送伪装DHCP请求�
     </item>
     
     <item>
-      <title>ICMP数据报</title>
+      <title>ICMP数据报Identifier中BE和LE的区别</title>
       <link>https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</link>
       <pubDate>Fri, 26 May 2023 22:19:13 +0800</pubDate>
       
       <guid>https://hellciw.github.io/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</guid>
-      <description>ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
+      <description>Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
 这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。
 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。
 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。
