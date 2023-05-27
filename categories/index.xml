@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on hellciw</title>
+    <link>https://juicebar-demo.add1.dev/categories/</link>
+    <description>Recent content in Categories on hellciw</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Feb 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://juicebar-demo.add1.dev/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>HTTP</title>
+      <link>https://juicebar-demo.add1.dev/categories/http/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/categories/http/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ICMP</title>
+      <link>https://juicebar-demo.add1.dev/categories/icmp/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/categories/icmp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://juicebar-demo.add1.dev/categories/linux/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/categories/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://juicebar-demo.add1.dev/categories/vue/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/categories/vue/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

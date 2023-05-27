@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>hellciw</title>
+    <link>https://juicebar-demo.add1.dev/</link>
+    <description>Recent content on hellciw</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Feb 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://juicebar-demo.add1.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ICMP数据报</title>
+      <link>https://juicebar-demo.add1.dev/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</guid>
+      <description>ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
+这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。 总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。 </description>
+    </item>
+    
+    <item>
+      <title>Linux自启动方式</title>
+      <link>https://juicebar-demo.add1.dev/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/</guid>
+      <description>在Linux中，有多种方式可以设置开机自启动。以下是几种常见的方式：
+使用init.d或rc.d脚本：在/etc/init.d/或/etc/rc.d/目录中，你可以创建一个启动脚本，并使用特定的命名约定（如以&amp;quot;S&amp;quot;开头并在其后跟一个数字来定义启动顺序）。这些脚本将在系统引导过程中自动执行。例如，你可以将启动脚本放在/etc/init.d/myscript，然后使用以下命令将其添加到启动过程中：
+sudo chmod +x /etc/init.d/myscriptsudo update-rc.d myscript defaults 使用systemd服务：systemd是用于管理系统进程和服务的初始化系统。你可以创建一个自定义的systemd服务单元文件，将其放置在/etc/systemd/system/目录中，并使用systemctl命令启用它。例如，你可以创建一个名为myservice.service的服务单元文件，然后使用以下命令启用它：
+sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中的定时任务管理器。你可以编辑cron表以指定在系统引导时运行的命令或脚本。使用crontab -e命令编辑当前用户的cron表，并添加一个@reboot行来指定在系统引导时执行的命令。例如：
+@reboot /path/to/myscript.sh 请注意，以上这些方法可能在不同的Linux发行版中略有差异。因此，你可能需要根据你所使用的特定发行版进行适当的调整。</description>
+    </item>
+    
+    <item>
+      <title>Vue尝试</title>
+      <link>https://juicebar-demo.add1.dev/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
+      <description>Vue学习笔记 一、二维数组尝试 var vm = new Vue({ el: &amp;#34;#app&amp;#34;, data: { huilv:[ [6.8540, 132.9787, 1298.7013, 1.3278], [6.8540, 132.9787, 1298.7013, 1.3278] ],} 二、watch监听实现 watch: {first: function(newValue) {this.second = newValue * this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];},second: function(newValue) {this.first = newValue / this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];}} 三、数组的更新检测 #变更方法 Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：
+push() pop() shift() unshift() splice() sort() reverse() 你可以打开控制台，然后对前面例子的 items 数组尝试调用变更方法。比如 example1.items.push({ message: &#39;Baz&#39; })。</description>
+    </item>
+    
+    <item>
+      <title>图解HTTP</title>
+      <link>https://juicebar-demo.add1.dev/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/post/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0/</guid>
+      <description>图解HTTP HTTP协议的职责（客户端） 生成针对目标web服务器的HTTP请求报文
+TCP协议的职责（客户端） 为了方便通信，将HTTP请求报文分割成报文段按序号分成多个报文段，把每个报文段可靠地传给对方
+IP协议的职责（路由器） 搜索对方的地址，一边中转一边传送
+TCP协议的职责（服务器） 从对方接受到的报文段按序号以原来的顺序重组请求报文
+HTTP协议的职责（服务器） 对web服务器请求的内容处理 ，请求的处理结果按照TCP/IP通信协议向用户进行回传
+URL（Uniform Resource Identifier） 某个协议方案表示的资源的定位标识符
+Uniform 规定统一的格式可方便处理多种不同类型的资源，而不用根据上下文环境来识别资源指定的访问方式。另外加入新的协议方案如:http、ftp也容易
+Resource 资源定义是可标识的如何东西。资源不仅仅是单一的，也可以是多数的集合体。
+Identifier 表示可标识的对象，也称为标识符
+告知服务器意图的HTTP方法 GET 获得资源，get方法用来请求访问已被URI识别的资源
+POST 用来传输实体的主体，虽然GET方法也可以传输实体的主体，但一般不用GET方法进行传输，而是用post
+PUT 传输文件，就像ftp协议的文件上传，要求请求报文的主体中包含文件内容，然后保存在请求URI指定的位置。但是鉴于HTTP/1.1的PUT自身不带有验证机制，任何人都能上传，存在安全问题，因此一般web网站不采用这种方法
+HEAD HEAD方法和GET方法一样，只是不返回报文主体，用于确认URI的有效性及资源更新的日期时间等
+DELETE 和PUT相反的方法，但一般网站不带有验证机制，所以也不使用该方法，当配合web应用程序的验证机制，或遵守REST标准时还是有可能开放使用（PUT同）
+OPTIONS 用来查询针对请求URI指定的资源支持的方法
+“你支持什么方法”“支持GET和HEAD方法”
+TRACE 追踪路径，让web服务器端将之前的请求通信环回给客户端的方法。但是TRACE方法本来不怎么常用，再加上它容易引发XST（Cross Site Tracing,跨站追踪）攻击，通常更不会使用了。
+CONNECT 要求使用隧道协议连接代理。要求在与代理服务器通信时建立隧道，实现隧道协议进行TCP通信。主要使用SSL（安全套接层）和TLS（传输层安全）协议把通信内容加密后经网络隧道传输 CONNECT方法格式如下
+CONNECT 代理服务器名:端口号 HTTP版本
+常用内容编码 gzip（GUN zip） compress（UNIX系统的标准压缩） deflate（zlib） identity（不进行编码） WireShark学习 根据“计算机网络实验.cap”回答以下问题： 1、 第 1 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 2、 第 8 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 3、 第 32 个分组的源物理地址、目标物理地址、源 IP 地址、目的 IP 地址、每层的网络协议 类型、传递的信息内容是怎样的？ 4、观察这个记录，以分组 184、73 为例，参考图 2 举例说明 DNS、HTTP 的下层支撑协议。 （重点说明 DNS、HTTP 分别使用那种传输层协议？）</description>
+    </item>
+    
+    <item>
+      <title>About Me</title>
+      <link>https://juicebar-demo.add1.dev/about/</link>
+      <pubDate>Fri, 26 Apr 2019 20:18:54 +0300</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/about/</guid>
+      <description>欢迎您的光临，小博客蓬荜生辉 这个博客会写一些学习心得，和生活随笔。 </description>
+    </item>
+    
+  </channel>
+</rss>

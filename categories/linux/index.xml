@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Linux on hellciw</title>
+    <link>https://juicebar-demo.add1.dev/categories/linux/</link>
+    <description>Recent content in Linux on hellciw</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Feb 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://juicebar-demo.add1.dev/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux自启动方式</title>
+      <link>https://juicebar-demo.add1.dev/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/post/linux%E8%87%AA%E5%90%AF%E5%8A%A8%E6%96%B9%E5%BC%8F/</guid>
+      <description>在Linux中，有多种方式可以设置开机自启动。以下是几种常见的方式：
+使用init.d或rc.d脚本：在/etc/init.d/或/etc/rc.d/目录中，你可以创建一个启动脚本，并使用特定的命名约定（如以&amp;quot;S&amp;quot;开头并在其后跟一个数字来定义启动顺序）。这些脚本将在系统引导过程中自动执行。例如，你可以将启动脚本放在/etc/init.d/myscript，然后使用以下命令将其添加到启动过程中：
+sudo chmod +x /etc/init.d/myscriptsudo update-rc.d myscript defaults 使用systemd服务：systemd是用于管理系统进程和服务的初始化系统。你可以创建一个自定义的systemd服务单元文件，将其放置在/etc/systemd/system/目录中，并使用systemctl命令启用它。例如，你可以创建一个名为myservice.service的服务单元文件，然后使用以下命令启用它：
+sudo systemctl enable myservice.service 使用cron作业：cron是Linux系统中的定时任务管理器。你可以编辑cron表以指定在系统引导时运行的命令或脚本。使用crontab -e命令编辑当前用户的cron表，并添加一个@reboot行来指定在系统引导时执行的命令。例如：
+@reboot /path/to/myscript.sh 请注意，以上这些方法可能在不同的Linux发行版中略有差异。因此，你可能需要根据你所使用的特定发行版进行适当的调整。</description>
+    </item>
+    
+  </channel>
+</rss>

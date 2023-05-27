@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ICMP on hellciw</title>
+    <link>https://juicebar-demo.add1.dev/categories/icmp/</link>
+    <description>Recent content in ICMP on hellciw</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 18 Feb 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://juicebar-demo.add1.dev/categories/icmp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ICMP数据报</title>
+      <link>https://juicebar-demo.add1.dev/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</link>
+      <pubDate>Sat, 18 Feb 2023 22:19:13 +0800</pubDate>
+      
+      <guid>https://juicebar-demo.add1.dev/post/icmp%E6%95%B0%E6%8D%AE%E6%8A%A5/</guid>
+      <description>ICMP数据报 Q: 在icmp数据报中的标识符 Identifier (BE): 512 (0x0200) Identifier (LE): 2 (0x0002)这两个标识符有什么区别，有什么用，说个例子解释一下
+这两个标识符都是 ICMP 报文中的标识符字段，用于标识发送方发送的 ICMP 报文。区别在于 BE 和 LE 分别代表大端序和小端序，即字节序的不同。 在网络通信中，不同的计算机可能使用不同的字节序，因此需要在传输数据时进行字节序的转换，以保证数据的正确性。在 ICMP 报文中，标识符字段是一个 16 位的无符号整数，因此需要在传输时进行字节序的转换。 例如，当一个大端序的计算机向一个小端序的计算机发送 ICMP 报文时，标识符字段需要进行字节序的转换，将 BE 的值 512 转换为 LE 的值 2。这样接收方才能正确地识别发送方发送的 ICMP 报文。 总之，标识符字段的作用是用于标识发送方发送的 ICMP 报文，而 BE 和 LE 则是用于表示不同字节序的标识符值，以保证数据在网络传输中的正确性。 </description>
+    </item>
+    
+  </channel>
+</rss>
