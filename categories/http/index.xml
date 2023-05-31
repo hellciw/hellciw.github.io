@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>HTTP on hellciw</title>
+    <title>HTTP on hellciw@Blog</title>
     <link>https://hellciw.github.io/categories/http/</link>
-    <description>Recent content in HTTP on hellciw</description>
+    <description>Recent content in HTTP on hellciw@Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Thu, 18 May 2023 22:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/categories/http/index.xml" rel="self" type="application/rss+xml" />
