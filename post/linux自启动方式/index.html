@@ -5,6 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>Linux自启动方式 | hellciw@Blog</title>
+	
+	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    
     <meta name="description"
         content="在Linux中，有多种方式可以设置开机自启动。以下是几种常见的方式：
 使用init.d或rc.d脚本：在/etc/init.d/或/etc/rc.d/目录中，你可以创建一个启动脚本，并使用特定的命名约定（如以&quot;S&quot;开头并在其后跟一个数字来定义启动顺序）。这些脚本将在系统引导过程中自动执行。例如，你可以将启动脚本放在/etc/init.d/myscript，然后使用以下命令将其添加到启动过程中：
