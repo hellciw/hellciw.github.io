@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>Codebreakers战队 WriteUp | hellciw@Blog</title>
+    <meta name="description"
+        content="排名 战队名称：第225名
+解题思路 1、解压管道压缩包得到一张图片
+2、将图片用StegSolve打开，不断查看图片各个通道，会发现在单色0通道上左上角出现白色条纹，却中间图案非常混杂，即可得知在图片的混杂数据。
+打开analyse的data extract 选择red 0 Column参数，点击Preview
+第一行即出现flag
+flag{098 8f2a657d8936a76876d4f39f7d7a0} 图片文件：
+https://wwcb.lanzouw.com/i9qgI0y5a17i ">
+    <link rel="canonical" href="https://hellciw.github.io/post/codebreakers%E6%88%98%E9%98%9F-writeup/" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+    
+    <link rel="stylesheet" href="https://hellciw.github.io/scss/style.min.d6341f25b6d8ae42bfd0057381190ef7cef03c7dc8842acc90df936fdde824d7.css">
+
+    <meta property="og:title" content="Codebreakers战队 WriteUp" />
+<meta property="og:description" content="排名 战队名称：第225名
+解题思路 1、解压管道压缩包得到一张图片
+2、将图片用StegSolve打开，不断查看图片各个通道，会发现在单色0通道上左上角出现白色条纹，却中间图案非常混杂，即可得知在图片的混杂数据。
+打开analyse的data extract 选择red 0 Column参数，点击Preview
+第一行即出现flag
+flag{098 8f2a657d8936a76876d4f39f7d7a0} 图片文件：
+https://wwcb.lanzouw.com/i9qgI0y5a17i " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://hellciw.github.io/post/codebreakers%E6%88%98%E9%98%9F-writeup/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2023-06-03T18:19:13+08:00" />
+<meta property="article:modified_time" content="2023-06-03T18:19:13+08:00" /><meta property="og:site_name" content="晚风吹少年" />
+
+    <meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Codebreakers战队 WriteUp"/>
+<meta name="twitter:description" content="排名 战队名称：第225名
+解题思路 1、解压管道压缩包得到一张图片
+2、将图片用StegSolve打开，不断查看图片各个通道，会发现在单色0通道上左上角出现白色条纹，却中间图案非常混杂，即可得知在图片的混杂数据。
+打开analyse的data extract 选择red 0 Column参数，点击Preview
+第一行即出现flag
+flag{098 8f2a657d8936a76876d4f39f7d7a0} 图片文件：
+https://wwcb.lanzouw.com/i9qgI0y5a17i "/>
+
+    
+    
+    
+
+</head><body><nav class="navbar is-light" role="navigation">
+    <div class="container">
+        <div class="navbar-brand">
+            <a href="/" title="home" class="navbar-item">
+                <span class="logo">
+                    <h1>hellciw@Blog</h1>
+                </span>
+            </a>
+
+            
+            <a id="theme-toggle" class="theme-toggle" href="#">
+                <img src="https://hellciw.github.io/svg/sun.svg" alt="sun icon" class="theme-icon" />
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                
+                <a href="/about" class="navbar-item">关于本站</a>
+                
+                <a href="/post" class="navbar-item">文章归档</a>
+                
+                <a href="/categories" class="navbar-item">文章标签</a>
+                
+            </div>
+
+        </div>
+        <div class="search">
+            <div id="fastSearch">
+                <input id="searchInput" tabindex="0" placeholder="Search..">
+                <ul id="searchResults">
+
+                </ul>
+            </div>
+            <a id="search-btn" style="display: inline-block;" href="# ">
+                <div class="icon-search"><svg class="search-svg" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></div>
+            </a>
+        </div>
+
+        <script src="/js/fuse.min.js"></script> 
+        <script src="/js/fastsearch.js"></script>
+
+    </div>
+</nav>
+
+<script>
+    
+    document.addEventListener('DOMContentLoaded', function() {
+        var burger = document.querySelector('.navbar-burger');
+        burger.addEventListener('click', function() {
+            burger.classList.toggle('is-active');
+            document.querySelector('.navbar-menu').classList.toggle('is-active');
+        });
+    });
+
+    
+    function setTheme(theme) {
+        let body = document.body;
+        let themeIcon = document.querySelector(".theme-icon");
+        if (theme === "dark") {
+            body.classList.add("dark-mode");
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/moon.svg";
+            themeIcon.alt = "moon icon";
+        } else {
+            body.classList.remove("dark-mode");
+            themeIcon.src = "https:\/\/hellciw.github.io\/svg/sun.svg";
+            themeIcon.alt = "sun icon";
+        }
+        
+        localStorage.setItem("theme", theme);
+    }
+
+    
+    let theme = localStorage.getItem("theme") || "light";
+    const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (isDarkMode) {
+        
+        setTheme('dark');
+
+    } else {
+        
+        setTheme('light');
+    }
+    setTheme(theme);
+
+    
+    document.getElementById("theme-toggle").addEventListener("click", function() {
+        if (theme === "light") {
+            theme = "dark";
+        } else {
+            theme = "light";
+        }
+        setTheme(theme);
+    });
+
+
+
+</script>
+
+</header><main>
+<div class="single-container">
+    <div class="archive">
+        <h1 class="title is-1">Codebreakers战队 WriteUp</h1>
+        <div class="title subtitle heading is-6">
+            <div class="author-info columns is-vcentered">
+                <div class="column">
+                    <div class="columns is-vcentered is-mobile">
+                        
+                        <div class="column is-narrow">
+                            <img src="/images/profile.jpg" class="author-image">
+                        </div>
+                        
+                        <div class="column" >
+                            <p>hellciw</p>
+                            <p><time>June 3, 2023</time>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="small-categories-container">
+                    <a
+                        href="/categories/misc">MISC</a>
+                </div>
+            </div>
+        </div>
+        <div class="content article-content">
+            <div class="toc-container">
+                
+    <div class="post-toc">
+        
+    </div>
+                </div>
+            <h2 id="排名">排名</h2>
+<p>战队名称：第225名</p>
+<p><a href="https://imgse.com/i/pCpzctI"><img src="https://s1.ax1x.com/2023/06/03/pCpzctI.png" alt="pCpzctI.png"></a></p>
+<h2 id="解题思路">解题思路</h2>
+<p>1、解压管道压缩包得到一张图片</p>
+<p>2、将图片用StegSolve打开，不断查看图片各个通道，会发现在单色0通道上左上角出现白色条纹，却中间图案非常混杂，即可得知在图片的混杂数据。</p>
+<p><a href="https://imgse.com/i/pCpzght"><img src="https://s1.ax1x.com/2023/06/03/pCpzght.png" alt="pCpzght.png"></a></p>
+<p>打开analyse的data extract  选择red 0 Column参数，点击Preview</p>
+<p><a href="https://imgse.com/i/pCpz5ng"><img src="https://s1.ax1x.com/2023/06/03/pCpz5ng.png" alt="pCpz5ng.png"></a></p>
+<p>第一行即出现flag</p>
+<pre tabindex="0"><code>flag{098 8f2a657d8936a76876d4f39f7d7a0}
+</code></pre><p>图片文件：</p>
+<pre tabindex="0"><code>https://wwcb.lanzouw.com/i9qgI0y5a17i
+</code></pre>
+        </div>
+    </div><hr style="border-top: 1px solid #EEEEEE;">
+<div id="comment"></div>
+<script>
+    const getStoredTheme = () => localStorage.getItem("theme") === "dark" ? "dark" : "light";
+
+    const setGiscusTheme = () => {
+        const sendMessage = (message) => {
+            const iframe = document.querySelector('iframe.giscus-frame');
+            if (iframe) {
+                iframe.contentWindow.postMessage({giscus: message}, 'https://giscus.app');
+            }
+        }
+        sendMessage({setConfig: {theme: getStoredTheme()}})
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const giscusAttributes = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "hellciw\/hellciw.github.io",
+            "data-repo-id": "R_kgDOJhQedA",
+            "data-category": "Announcements",
+            "data-category-id": "DIC_kwDOJhQedM4CWy4v",
+            "data-mapping": "pathname",
+            "data-reactions-enabled": "1",
+            "data-emit-metadata": "0",
+            "data-input-position": "bottom",
+            "data-theme": getStoredTheme(),
+            "data-lang": "zh-CN",
+            "data-loading": "lazy",
+            "crossorigin": "anonymous",
+        };
+
+        
+        const giscusScript = document.createElement("script");
+        Object.entries(giscusAttributes).forEach(
+            ([key, value]) => giscusScript.setAttribute(key, value));
+        document.getElementById("comment").appendChild(giscusScript);
+
+        
+        const themeToggle = document.querySelector(".theme-toggle");
+        if (themeToggle) {
+            themeToggle.addEventListener("click", setGiscusTheme);
+        }
+    });
+
+</script>
+
+
+<div class="pp-container">
+        <section class="pre-and-post">
+                        <div class="has-text-left">
+                            
+                            <p>Previous post</p>
+                            <a href="https://hellciw.github.io/post/ping%E5%91%BD%E4%BB%A4/">ICMP数据报ping命令</a>
+                            
+                        </div>
+                        <div class="has-text-right">
+                            
+                        </div>
+        </section>
+    </div>
+</div>
+
+        </main><footer class="footer">
+    <div class="content has-text-centered">
+    <span>&copy; 2023 <a href="https://hellciw.github.io/">hellciw@Blog</a></span>
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" target="_blank">Hugo</a> &
+        <a href="https://github.com/hotjuicew/hugo-JuiceBar" target="_blank">JuiceBar</a>
+    </span>
+    </div>
+  </footer></body>
+</html>
+

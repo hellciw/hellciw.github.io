@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MISC on hellciw@Blog</title>
+    <link>https://hellciw.github.io/categories/misc/</link>
+    <description>Recent content in MISC on hellciw@Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 03 Jun 2023 18:19:13 +0800</lastBuildDate><atom:link href="https://hellciw.github.io/categories/misc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Codebreakers战队 WriteUp</title>
+      <link>https://hellciw.github.io/post/codebreakers%E6%88%98%E9%98%9F-writeup/</link>
+      <pubDate>Sat, 03 Jun 2023 18:19:13 +0800</pubDate>
+      
+      <guid>https://hellciw.github.io/post/codebreakers%E6%88%98%E9%98%9F-writeup/</guid>
+      <description>排名 战队名称：第225名
+解题思路 1、解压管道压缩包得到一张图片
+2、将图片用StegSolve打开，不断查看图片各个通道，会发现在单色0通道上左上角出现白色条纹，却中间图案非常混杂，即可得知在图片的混杂数据。
+打开analyse的data extract 选择red 0 Column参数，点击Preview
+第一行即出现flag
+flag{098 8f2a657d8936a76876d4f39f7d7a0} 图片文件：
+https://wwcb.lanzouw.com/i9qgI0y5a17i </description>
+    </item>
+    
+  </channel>
+</rss>
