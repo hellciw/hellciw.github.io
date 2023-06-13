@@ -149,13 +149,15 @@ CONNECT 代理服务器名:端口号 HTTP版本
     </item>
     
     <item>
-      <title>Vue尝试</title>
+      <title>Vue项目学习</title>
       <link>https://hellciw.github.io/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Mon, 01 May 2023 22:19:13 +0800</pubDate>
       
       <guid>https://hellciw.github.io/post/vue%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</guid>
       <description>Vue学习笔记 一、二维数组尝试 var vm = new Vue({ el: &amp;#34;#app&amp;#34;, data: { huilv:[ [6.8540, 132.9787, 1298.7013, 1.3278], [6.8540, 132.9787, 1298.7013, 1.3278] ],} 二、watch监听实现 watch: {first: function(newValue) {this.second = newValue * this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];},second: function(newValue) {this.first = newValue / this.huilv[Number(this.firstbutton - 1)][Number(this.secondbutton -1)];}} 三、数组的更新检测 #变更方法 Vue 将被侦听的数组的变更方法进行了包裹，所以它们也将会触发视图更新。这些被包裹过的方法包括：
-push() pop() shift() unshift() splice() sort() reverse() 你可以打开控制台，然后对前面例子的 items 数组尝试调用变更方法。比如 example1.items.push({ message: &#39;Baz&#39; })。</description>
+push() pop() shift() unshift() splice() sort() reverse() 你可以打开控制台，然后对前面例子的 items 数组尝试调用变更方法。比如 example1.items.push({ message: &#39;Baz&#39; })。
+四、链接数据库 页面调用路由表的函数
+getmessage() { const self = this; self.</description>
     </item>
     
   </channel>
